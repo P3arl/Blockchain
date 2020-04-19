@@ -1,0 +1,31 @@
+# File node.toml
+
+[parity]
+chain = "parityGenesis.json"
+base_path = "node"
+
+[network]
+port = 30300
+#bootnodes = []
+
+[rpc]
+interface = "all"
+cors = ["all"]
+hosts = ["all"]
+port = 8545
+apis = ["all"]
+
+[websockets]
+interface = "all"
+port = 8546
+origins = ["all"]
+apis = ["web3", "eth", "net", "personal", "parity", "parity_set", "traces", "rpc", "parity_accounts"]
+hosts = ["all"]
+
+[account]
+password = ["pwd/password.pwd"]
+
+[mining]
+engine_signer = "0x29Ba68568fc94ca11b7F5Ef0eF8B350dB0C81C8f"
+reseal_on_txs = "none"
+force_sealing = true
